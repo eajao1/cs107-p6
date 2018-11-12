@@ -51,6 +51,7 @@ class TestPathFinder(unittest.TestCase):
         self.assertEqual(self.pathfinder.canMoveTo(4,20), False)
         self.assertEqual(self.pathfinder.canMoveTo(4,20), False)
 
+
     # Tests for `checkValidPath`
     def test_checkValidPath(self):
         self.setup(1,1,5,5,20,20,level1)
@@ -79,7 +80,7 @@ class TestPathFinder(unittest.TestCase):
 
     def test_findPath(self):
         self.setup(19,1,5,5,20,20,level3)
-        self.assertEqual(self.pathfinder.canSolve((5,5)), False)
+        self.assertEqual(self.pathfinder.findPath((5,5)), False)
         self.setup(1,1,5,5,20,20,level3)
         # Note that I will use my own implementation of
         # `checkValidPath` for the actual (secret) tests
